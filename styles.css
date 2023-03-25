@@ -1,45 +1,66 @@
-body{
-    text-align: center;
-    background-color: hsl(212, 45%, 89%);
-    font-family: 'Outfit', sans-serif;
+:root{
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(212, 45%, 89%);
+    --grayish-blue: hsl(220, 15%, 55%);
+    --dark-blue: hsl(218, 44%, 22%);
 }
 
+/*Grid*/
+
+body{
+    min-height: 100vh;
+    max-width: 1440px;
+    display: grid;
+    place-items: center;
+    background-color: var(--light-gray);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Outfit', sans-serif;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    text-align: center;
+}
 
 .outline{
-    background-color: white;
-    border-radius: 30px; 
-    display: inline-block;
-    width: 20%;
-    margin: 5% auto 5% auto;
+    margin: 0 auto;
+    grid-row-start: 2 ;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-color: var(--white);
+    border-radius: 10%;
+    width: 340px;
 
-}
-.pic{
-    padding-top: 27px;
-}
-
-.barimg{
-    width: 80%;
-    border-radius: 30px;
+    
 }
 
-.text{
-    width: 85%;
-    margin: auto;
-    font-size: 12px;
-    color: hsl(218, 44%, 22%);
+.barimg {
+    border-radius: 10%;
+    margin: 20px auto 30px auto;
+    width: 300px;
+    height: 300px;
+}
+
+h2{
+    font-weight: 700;
+    color: var(--dark-blue);
+    width: 70%;
+    font-size: 15px;
+    margin: 0 auto;
 }
 
 h3{
     font-weight: 400;
-    
+    color: var(--grayish-blue);
+    width: 70%;
+    font-size: 15px;
+    margin: 0 auto;
+    padding: 20px 0 30px 0;
 }
-.attribution { 
-    font-size: 11px; 
-    text-align: center; 
-    width: 60%;  
-    display: inline-block; 
+
+
+.attribution{
+    grid-row-start: 3;
+    grid-column-start: 2;
+    margin: 0 auto;
 }
-    .attribution a {
-        color: hsl(228, 45%, 44%); 
-        text-decoration: none;
-    }
